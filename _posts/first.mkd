@@ -1,0 +1,12 @@
+---
+layout: post
+title: "My First Blog"
+date: 2015-08-31
+comments: true
+categories: 
+---
+
+#<center>First Blog:Hello World</center>
+     This is my first blog wrote by markdown.Haha,Welcome to Github page Nancy!Here I list two goals which I hope I can achive at the end of 2015
+          1.finsh reading book:Java Concurrency in Practice
+          2.write at least 10 technical blog in github page
