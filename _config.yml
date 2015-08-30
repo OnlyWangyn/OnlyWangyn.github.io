@@ -1,33 +1,26 @@
-name: White Paper
-markdown: redcarpet
-pygments: true
-url: http://onlywangyn.github.io
-paginate: 8
-description:     Jekyll theme for Programmers
-intro: White Paper is a Jekyll theme most suited to be used on tech blogs that like their content to shine.
-logo:             logo.png
-disqus_shortname:
-# url: http://gotchacode.com
-#Comment out url when working locally to resolve base urls correctly
-#url:
+title:            Scribble
+description:      A jekyll theme. Because I scribble.
+url:              http://onlywangyn.github.io/
+signoff:          Nancy
+disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 
-# Owner/author information
-owner:
-  name:           onlywangyn
-  avatar:         <avatar-image-link>
-  email:          wangyanan613@hotmail.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  github:OnlyWangyn
-  stackexchange:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:
-
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# Links to include in top navigation
-# For external links add external: true
+links:
+  - name:         About
+    url:          /about
+  - name:         Blog
+    url:          http://muan.co
+    external:     true
+  - name:         Email
+    url:          mailto:hello@muan.co
+    external:     true
+  - name:         GitHub
+    url:          http://github.com/muan
+    external:     true
+highlighter:      pygments
+permalink:        pretty
+markdown:         redcarpet
+redcarpet:
+  extensions:
+    - smart
