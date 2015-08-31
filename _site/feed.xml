@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scribble</title>
+    <description>A jekyll theme. Because I scribble.</description>
+    <link>http://onlywangyn.github.io/</link>
+    <atom:link href="http://onlywangyn.github.io//feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>First Blog</title>
+        <description>&lt;p&gt;This is my first blog wrote by markdown.Haha,Welcome to Github page Nancy!Here I list two goals which I hope I can achive at the end of 2015
+1.finsh reading book:Java Concurrency in Practice,current in Chapter 3.Always try,also fail in the middle of this book,and then start fresh.
+2.write at least 5 technical blogs in github page&lt;/p&gt;
+</description>
+        <pubDate>Mon, 31 Aug 2015 10:00:00 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2015/08/31/First-blog/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2015/08/31/First-blog/</guid>
+      </item>
+    
+      <item>
+        <title>Fir</title>
+        <description>&lt;p&gt;Sometimes we keep looking for resources everywhere only to realize that we had
+it with us the whole time. Situation like these might arise when you have too
+many choices. I too faced these moments before. It is a tough situation indeed.&lt;/p&gt;
+
+&lt;p&gt;I think one should develop art of learning before trying to learn a lot of
+things at once. Once you know how to learn and improve how to learn through
+constant iterations. It becomes easy thereafter.&lt;/p&gt;
+
+&lt;p&gt;I changed quite a lot as a developer and person. Last year. I was all about
+learning new technologies, getting super aware about all the frameworks that
+are popular. Now, I don&amp;rsquo;t even bother checking these. My goals are now mostly
+on low level decisions or high level architecture. All these frameworks and
+likes are just tooling. Nothing less nothing more. The main focus should be on
+problem solving. And problem solving at its heart is always
+Language/Platform/Frameworks agnostic.&lt;/p&gt;
+
+&lt;p&gt;Reading books and theory is also very important at this stage. Consider it as
+like sitting on the shoulder of giants. Of course practise is very important as
+well but making sure there is a good balance between these two really pays off.&lt;/p&gt;
+
+&lt;p&gt;I love reading books. I have bought quite some books in the past 11 months. I
+have so much to read and learn from these gems. I have done good progress in
+completing some of these. Hoping to cover more in the near future.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 Jun 2014 00:00:00 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/06/12/On-Using-What-You-Already-Have/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/06/12/On-Using-What-You-Already-Have/</guid>
+      </item>
+    
+      <item>
+        <title>The Pragmatic Programmer Checklist</title>
+        <description>&lt;p&gt;Last year, I read a great book on Programming and development (The Pragmatic Programmer).
+Here is a gist of checklist you must do in case you are developer. These are very good
+and for sure will help you evolve as a better developer.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/vinitkumar/55ef44f759b7e5620d59.js&quot;&gt;&lt;/script&gt;
+</description>
+        <pubDate>Thu, 01 May 2014 16:35:26 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/05/01/the-pragmatic-programmer-checklist/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/05/01/the-pragmatic-programmer-checklist/</guid>
+      </item>
+    
+      <item>
+        <title>Simple State Machine Framework in c#</title>
+        <description>&lt;p&gt;This blog post covers a very simple, light weight, yet flexible state machine framework in C# .Net.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mubeenh/SSM&quot;&gt;Souce code on Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.nuget.org/packages/SSM/&quot;&gt;Download NuGet package&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Concept&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;State :&lt;/strong&gt; The state of a stateful entity. Represented by &lt;code&gt;IState&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stateful entity :&lt;/strong&gt; An entity that has a defined state. Represented by &lt;code&gt;IStatefulEntity&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Context :&lt;/strong&gt; A context in which a state machine executes a transition. It is simply a set of configuration and data that governs the execution of a state machine. Represented by &lt;code&gt;IStateMachineContext&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Transition handler :&lt;/strong&gt; A component that handles a transition of a stateful entity between a source state to target state. Represented by &lt;code&gt;ITransitionHandler&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Start by creating an entity that represents a state. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ServiceTicketState&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IState&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Code&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, create a stateful entity by implementing &lt;code&gt;IStatefulEntity&lt;/code&gt; interface. For exmaple:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IStatefulEntity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next comes transition handlers. A transition hadler is created by implementing &lt;code&gt;ITransitionHandler&lt;/code&gt; interface. Below is an example of a generic transition handler that can be used to abstract common functionalities in our Service Ticket example.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GenericTransitionHandler&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ITransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TransitionKey&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argumentsMap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;State&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ValidateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argumentsMap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;BeforeTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argumentsMap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AfterTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argumentsMap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next and final step is to create a &amp;lsquo;context&amp;rsquo; by implementing &lt;code&gt;IStateMachineContext&lt;/code&gt; interface. This interface declares following methods that need to be implemented to create a context.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;n&quot;&gt;ICollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetTransitions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;IDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ITransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;M&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetTransitionHandlersMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ICollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;M&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AllStates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Implementation approach is left to the user. It could from just hard coding for simple cases to database backed storage and retrieval for more advanced cases.&lt;/p&gt;
+
+&lt;p&gt;Here is an example implementation (hard coded for simplicity) &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ICollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetTransitions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ICollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;();&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// Define all possible transitions, and its source and target states&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_New&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;New&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ? means null or undefined state&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;New&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_Open&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Open&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Open&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_Close&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Closed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Closed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_ReOpen&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Open&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StateTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_Cancel&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Cancelled&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ITransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetTransitionHandlersMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;IDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ITransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ITransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;gt;();&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// create a map of all available transitions and their respective transition handlers&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_New&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NewTransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_Open&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OpenTransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_Close&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CloseTransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_ReOpen&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OpenTransitionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ICollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AllStates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;states&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;();&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// create a list of all possible states&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;states&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Code&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;New&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;New Ticket&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;states&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Code&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Open&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Ticket Open&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;states&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Code&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Closed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Ticket Closed&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;states&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Code&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Cancelled&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Ticket Cancelled&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;states&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now &lt;code&gt;ServiceTicket&lt;/code&gt; entity can be transitioned through state machine. Create an instance of &lt;code&gt;StateMachine&lt;/code&gt; as follows.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;            &lt;span class=&quot;n&quot;&gt;IStateMachineContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExampleStateMachineContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;StateMachine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StateMachine&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StateMachine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicketState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And request a transition as shown below.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;            &lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serviceTicket&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServiceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                 &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;An example service ticket&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;StateMachine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RequestTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serviceTicket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Transition_New&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And thats it. Your state machine is ready to handle transitions on the Service Ticket example entity.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 26 Feb 2014 14:07:18 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/02/26/simple-state-machine-framework-in-c-number/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/02/26/simple-state-machine-framework-in-c-number/</guid>
+      </item>
+    
+      <item>
+        <title>Setup A Local Gitignore Without Messing Up Project</title>
+        <description>&lt;p&gt;A lot of us use Git for Version Control. If you have used git, you must be aware of .gitignore files. It contains the list of all file and directories you want git to ignore so that it would nevet get committed. But if you work in multi person team. You might not have liberty to change the projects gitignore. What to do then?&lt;/p&gt;
+
+&lt;p&gt;Well, the solution is pretty simple. Say you are using any IDE like Pycharm or Netbeans. They always create some files to create track of your projects. Something like &lt;code&gt;.ropeproject&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So in order to make git ignore it, Go to : &lt;code&gt;cd .git/info/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You see there is a file called exclude. Fill it up with the files and directories you want it to ignore, just like the gist below:&lt;/p&gt;
+
+&lt;p&gt;&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/7597812.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;And it is done. Now you never have to worry about your editor messing up your commits.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Feb 2014 10:21:16 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/02/15/setup-a-local-gitignore-without-messing-up-project/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/02/15/setup-a-local-gitignore-without-messing-up-project/</guid>
+      </item>
+    
+      <item>
+        <title>How To Use Facebook Page Albums As Image Source in Django</title>
+        <description>&lt;p&gt;Lot of companies use Facebook for marketing their products. Facebook is mainly built around images. In fact the whole ecosystem is fueled by images. In order to scale for the vast user base of Facebook, they have done a really good job. &lt;/p&gt;
+
+&lt;p&gt;So what if you don&amp;rsquo;t want to use your own storage for uploading images and want to use Facebook for Images? It would be so cool, right?
+There are two benefits:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You don&amp;rsquo;t have to spend anytime setting up an app or service to deal with images. Believe me it is a real tough problem to solve given the size and count of images. You can&amp;rsquo;t put a bar on either of these two.&lt;/li&gt;
+&lt;li&gt;It gives your users a much user friendly way. They upload images just once on Facebook and it auto-magically appears on your website. Facebook almost never gets down so there is very good chance you will get a 99.9% uptime. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, In order to fix this problem last year I created a Ajax based plugins to fetch images from Facebook album. It asked user to enter album URL and name. But there was an issue with this approach. In order to get access to Facebook graph database it has to get access tokens and each access token only last two months. Plus, it collapsed when it faced IE, since there is unsolvable CORS issue with IE &amp;lt; 9 (our 50% client base for that project).&lt;/p&gt;
+
+&lt;p&gt;It was a tough problem to solve. But i finally found some good articles and projects on Internet. One such project was django-fbgallery. It used a really neat approach to get the Facebook images server side and renders it the page purely server side. It not only solved the IE issue, but also the quality and speed of image loading became instant.&lt;/p&gt;
+
+&lt;p&gt;But there was an issue with this app, it used URLS to render the albums and spoiled the pretty URLS that you would like for pages in Django. So I took the core part of the app ( the Facebook interaction part) and made a sweet CMS plugin out of it. &lt;/p&gt;
+
+&lt;p&gt;Here is the code to make it all work:&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;`python Facebook.py 
+from django.conf import settings
+from django.core.cache import cache
+import urllib2, urllib
+import django.utils.simplejson as json
+from django.template import defaultfilters&lt;/p&gt;
+
+&lt;p&gt;fql&lt;em&gt;url = &amp;lsquo;https://api.Facebook.com/method/fql.query&amp;rsquo;
+cache&lt;/em&gt;expires = getattr(settings, &amp;#39;CACHE_EXPIRES&amp;rsquo;, 30)&lt;/p&gt;
+
+&lt;p&gt;def get&lt;em&gt;fql&lt;/em&gt;result(fql):
+    cachename = &amp;#39;fbgallery&lt;em&gt;cache&lt;/em&gt;&amp;rsquo; + defaultfilters.slugify(fql)
+    data = None
+    if cache&lt;em&gt;expires &amp;gt; 0:
+        data = cache.get(cachename)
+    if data == None: 
+        options = {
+            &amp;#39;query&amp;rsquo;:fql,
+            &amp;#39;format&amp;rsquo;:&amp;#39;json&amp;rsquo;,
+        }
+        f = urllib2.urlopen(urllib2.Request(fql&lt;/em&gt;url, urllib.urlencode(options)))
+        response = f.read()
+        f.close()&lt;br&gt;
+        data = json.loads(response)
+        if cache&lt;em&gt;expires &amp;gt; 0:
+            cache.set(cachename, data, cache&lt;/em&gt;expires*60)
+    return data&lt;/p&gt;
+
+&lt;p&gt;def display&lt;em&gt;album(album&lt;/em&gt;id):
+    &amp;rdquo;&amp;ldquo;&amp;quot;Display a Facebook album&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;First check that the album id belongs to the page id specified
+&amp;quot;&amp;quot;&amp;quot;
+fb_id = settings.FB_PAGE_ID
+fql = &amp;quot;select aid, name from album where owner=%s and aid=&amp;#39;%s&amp;#39;&amp;quot; % (fb_id, album_id)
+valid_album = get_fql_result(fql)
+if valid_album:
+    fql = &amp;quot;select pid, src, src_small, src_big, caption from photo where aid = &amp;#39;%s&amp;#39;  order by created desc&amp;quot; % album_id
+    album = get_fql_result(fql)
+    #album_detail = [item for item in valid_album]       
+    return album
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;I asked user to enter the album ID and name, then rendered the album using the plugin here:
+
+
+```python cms_plugins.py 
+from cms.plugin_base import CMSPluginBase
+from cms.plugin_pool import plugin_pool
+from django.utils.translation import ugettext_lazy as _
+from Facebook import display_album
+
+from models import FacebookGallery
+
+class FacebookGalleryPlugin(CMSPluginBase):
+    model = FacebookGallery
+    name = _(&amp;quot;Facebook Album Gallery&amp;quot;)
+    render_template = &amp;quot;cmsplugin_fbgallery/album.html&amp;quot;
+
+    def render(self, context, instance, placeholder):
+        album = display_album(instance.album_id)
+        context.update({
+          &amp;#39;object&amp;#39;: instance,
+          &amp;#39;album&amp;#39;: album,
+          })
+        return context
+
+plugin_pool.register_plugin(FacebookGalleryPlugin)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You could choose whatever template you want. It&amp;rsquo;s entirely upto you.  &lt;/p&gt;
+
+&lt;p&gt;Here is the image of this plugin live in action: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://imgur.com/dmrxcXh&quot;&gt;&lt;img src=&quot;http://i.imgur.com/dmrxcXh.png&quot; title=&quot;Hosted by imgur.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The plugin is open sourced here: &lt;a href=&quot;https://github.com/changer/cmsplugin-fbgallery&quot;&gt;cmsplugin-fbgallery&lt;/a&gt; . Feel free to contribute and ask questions.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Feb 2014 23:09:36 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/</guid>
+      </item>
+    
+      <item>
+        <title>Migrating To Octopress</title>
+        <description>&lt;p&gt;Finally after much ado, I am moving Gotchacode to Octopress. There are various reasons for doing it.
+I am listing some of them here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is absolutely no good theme if you are running a technical blog.&lt;/li&gt;
+&lt;li&gt;Syntax highlighting is pathetic.&lt;/li&gt;
+&lt;li&gt;I can&amp;rsquo;t write post in my text editor.&lt;/li&gt;
+&lt;li&gt;There is no source control.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But I will miss blogspot too. The integrated analytics was best in class and so was the SEO.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Feb 2014 01:37:02 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/02/14/migrating-to-octopress/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/02/14/migrating-to-octopress/</guid>
+      </item>
+    
+      <item>
+        <title>Music, Movies and Life</title>
+        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
+&lt;div dir=&quot;ltr&quot; style=&quot;text-align: left;&quot; trbidi=&quot;on&quot;&gt;I love watching Movies and I love Music. They are almost inseperable part of life. I love the way they could touch and move your life more than you could imagine. I remember watching &quot;The Social Network&quot; almost 50 times in college. It served as a push to write more code and do awesome in life.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Well, it might sound really strange but for last 10 years or so. I just let life flow in the natural way. I failed quite sometimes, achieved success as well. Made some long lasting friends, lost some people I felt who were my friends.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The great thing is that in all these experiences, I realised that what is the true purpose of my life. They say, there are just two important days in your life.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;The day when you are born, and the day you find out why?&lt;/blockquote&gt;I think I just found out the purpose of my life. It&#39;s not something I would want to disclose and claim I am going to achieve. It is the way my thinking changed and the choice of life I am going to make.&lt;br /&gt;&lt;br /&gt;Also, I would love to thank the wonderful readers of this blog - which initially started casually just to empty my mind on topics I felt were relevant at that time. For sure there are some not so good posts as well. But again, this blog is just me writing what comes in my mind. And if some of those helps someone or guide someone. Why not?&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;</description>
+        <pubDate>Sun, 12 Jan 2014 08:29:00 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/01/music-movies-and-life.html</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/01/music-movies-and-life.html</guid>
+      </item>
+    
+      <item>
+        <title>Happy New Year 2014</title>
+        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
+&lt;div dir=&quot;ltr&quot; style=&quot;text-align: left;&quot; trbidi=&quot;on&quot;&gt;A very happy new year to all the readers of this blog. To start with, I would try to publish a post at least once a week so that it may satisfy your appetite on a regular basis. Also, I am meditating about something new on this blog. It will be revealed when the time comes. With that said, have an amazing start to the year.&lt;/div&gt;
+&lt;/div&gt;</description>
+        <pubDate>Wed, 01 Jan 2014 13:22:00 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2014/01/happy-new-year-2014.html</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2014/01/happy-new-year-2014.html</guid>
+      </item>
+    
+      <item>
+        <title>Scribble, a Jekyll theme</title>
+        <description>&lt;p&gt;I have other themes, checkout (mainly) &lt;a href=&quot;https://github.com/muan/muan.github.com/releases&quot;&gt;this repository&lt;/a&gt; and &lt;a href=&quot;https://github.com/muan/jekyll-wardrobe&quot;&gt;this repository&lt;/a&gt;. &amp;lt;3&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;There is no clever design philosophy to talk about, I tried to find something to work with, and &amp;lsquo;scribble&amp;rsquo; came to my mind. This theme uses Open Sans powered by Google Web Fonts, and was written in plain HTML, SCSS &amp;amp; CoffeeScript, though .scss &amp;amp; .coffee files wouldn&amp;rsquo;t be included in the theme. &lt;/p&gt;
+
+&lt;p&gt;The theme is mobile optimised but I did not check browser compatibility. It looks great in Chrome, Safari and Firefox though.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/muan/scribble&quot; target=&quot;_blank&quot; class=&quot;big-button gray&quot;&gt;Get it on GitHub &amp;hearts;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;Get started&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/muan/scribble/fork&quot;&gt;Fork the repository&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Clone the repository to your computer.&lt;br /&gt; &lt;code&gt;git clone https://github.com/username/scribble&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bundle install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;If using older versions of Jekyll&lt;/strong&gt;&lt;br /&gt;
+Build and run jekyll using &lt;code&gt;jekyll --server --auto&lt;/code&gt;.&lt;br /&gt;
+&lt;strong&gt;If using &lt;a href=&quot;http://blog.parkermoore.de/2013/05/06/jekyll-1-dot-0-released/&quot;&gt;Jekyll 1.0&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
+Build Jekyll using &lt;code&gt;jekyll build&lt;/code&gt;.&lt;br /&gt;
+Then run Jekyll using &lt;code&gt;jekyll serve --watch&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Go to http://localhost:4000 for your site.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;Make it yours&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I have extract most user specific information to &lt;code&gt;_config.yml&lt;/code&gt;, you should be able to set up almost everything from it.&lt;/li&gt;
+&lt;li&gt;Change about.md for blog intro.&lt;/li&gt;
+&lt;li&gt;For domain settings, see &lt;a href=&quot;https://help.github.com/articles/setting-up-a-custom-domain-with-pages&quot;&gt;the guide from GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;Options&lt;/h3&gt;
+
+&lt;p&gt;When writing a post, there are 3 options you can add to the header.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;disqus: y&lt;/strong&gt;&lt;br /&gt;
+If disqus is set to &amp;#39;y&amp;rsquo;, at the end of the post there will be a disqus thread, just like this one. To use disqus, you MUST &lt;a href=&quot;http://disqus.com/&quot;&gt;set up your own disqus account&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;share: y&lt;/strong&gt;&lt;br /&gt;
+An option for showing tweet and like button under a post.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;date&lt;/strong&gt;: 2013-05-06 18:07:17&lt;br /&gt;
+Date is not a required header since Jekyll reads the file name for date, this was added in only for the &lt;strong&gt;signoff time&lt;/strong&gt;. (as shown at the end of this post) If you don&amp;rsquo;t want the signoff time, go into &lt;code&gt;/includes/signoff.html&lt;/code&gt; and remove the &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/muan/scribble&quot; target=&quot;_blank&quot; class=&quot;big-button gray&quot;&gt;Get it on GitHub &amp;hearts;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;The end&lt;/h3&gt;
+
+&lt;p&gt;Like it? &lt;a href=&quot;http://twitter.com/muanchiou&quot;&gt;Tell me&lt;/a&gt;.&lt;br/&gt;
+Problem? &lt;a href=&quot;https://github.com/muan/scribble&quot;&gt;Use GitHub Issues&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 May 2013 00:27:31 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2013/05/07/scribble-the-jekyll-theme/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2013/05/07/scribble-the-jekyll-theme/</guid>
+      </item>
+    
+  </channel>
+</rss>

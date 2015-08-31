@@ -1,7 +1,7 @@
 <html>
   <head>
-    <meta content='Happy New Year 2014 - Scribble' property='og:title' />
-    <title>Happy New Year 2014 - Scribble</title>
+    <meta content='Setup A Local Gitignore Without Messing Up Project - Scribble' property='og:title' />
+    <title>Setup A Local Gitignore Without Messing Up Project - Scribble</title>
     <link href='/images/fav.png' rel='shortcut icon'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
 <link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
@@ -18,8 +18,8 @@
 <meta content="http://muan.co/images/og.png" property="og:image" />
 <meta content="" property="fb:app_id" />
 
-  <meta content='http://onlywangyn.github.io//2014/01/happy-new-year-2014.html' property='og:url' />
-  <meta content="A very happy new year to all the readers of this blog. To start with, I would try to publish a post at least once a w..." property='og:description' />
+  <meta content='http://onlywangyn.github.io//2014/02/15/setup-a-local-gitignore-without-messing-up-project/' property='og:url' />
+  <meta content="A lot of us use Git for Version Control. If you have used git, you must be aware of .gitignore files. It contains the..." property='og:description' />
   <meta content="article" property="og:type" />
 
 <!-- - -->
@@ -65,14 +65,14 @@
       <section class="paging">
   
     <div class="left">
-      <a href="/2013/05/07/scribble-the-jekyll-theme/">
+      <a href="/2014/02/14/how-to-use-facebook-page-albums-as-image-source-in-django/">
         ‹
       </a>
     </div>
   
   
     <div class="right">
-      <a href="/2014/01/music-movies-and-life.html">
+      <a href="/2014/02/26/simple-state-machine-framework-in-c-number/">
         ›
       </a>
     </div>
@@ -81,17 +81,27 @@
       <div class="content">
         <section class='post'>
           <h1 class="upcase">
-            <div class='date'>01 Jan 2014</div>
-            Happy New Year 2014
+            <div class='date'>15 Feb 2014</div>
+            Setup A Local Gitignore Without Messing Up Project
           </h1>
-          <div class="css-full-post-content js-full-post-content">
-<div dir="ltr" style="text-align: left;" trbidi="on">A very happy new year to all the readers of this blog. To start with, I would try to publish a post at least once a week so that it may satisfy your appetite on a regular basis. Also, I am meditating about something new on this blog. It will be revealed when the time comes. With that said, have an amazing start to the year.</div>
-</div>
+          <p>A lot of us use Git for Version Control. If you have used git, you must be aware of .gitignore files. It contains the list of all file and directories you want git to ignore so that it would nevet get committed. But if you work in multi person team. You might not have liberty to change the projects gitignore. What to do then?</p>
+
+<p>Well, the solution is pretty simple. Say you are using any IDE like Pycharm or Netbeans. They always create some files to create track of your projects. Something like <code>.ropeproject</code></p>
+
+<p>So in order to make git ignore it, Go to : <code>cd .git/info/</code></p>
+
+<p>You see there is a file called exclude. Fill it up with the files and directories you want it to ignore, just like the gist below:</p>
+
+<p><noscript><pre>400: Invalid request
+</pre></noscript><script src="https://gist.github.com/7597812.js"> </script></p>
+
+<p>And it is done. Now you never have to worry about your editor messing up your commits.</p>
+
           <br />
 <p>
   Til next time,<br/>
   Nancy
-  <span class="muted">at 13:22</span>
+  <span class="muted">at 10:21</span>
 </p>
 <p>
   <img src="/images/scribble3.png" alt="scribble" /> 

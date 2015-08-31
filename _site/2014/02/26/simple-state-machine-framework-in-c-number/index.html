@@ -1,54 +1,90 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-<title>Jekyll theme for Programmers</title>
-<meta name="description" content="Jekyll theme for Programmers">
-<meta name="keywords" content="">
+  <head>
+    <meta content='Simple State Machine Framework in c# - Scribble' property='og:title' />
+    <title>Simple State Machine Framework in c# - Scribble</title>
+    <link href='/images/fav.png' rel='shortcut icon'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/syntax.css' rel='stylesheet' type='text/css' />
+<link href='/stylesheets/responsive.css' rel='stylesheet' type='text/css' />
+<!-- - -->
+<script src='/javascripts/jquery.js' type='text/javascript'></script>
+<script src='/javascripts/pd.js' type='text/javascript'></script>
+<script src='/javascripts/basics.js' type='text/javascript'></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!-- - -->
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<meta content='text/html; charset=utf-8' http-equiv='content-type' />
+<meta content="http://muan.co/images/og.png" property="og:image" />
+<meta content="" property="fb:app_id" />
 
-<meta property="og:type" content="article">
-<meta property="og:title" content="Simple State Machine Framework in c# &#8211; ">
-<meta property="og:description" content="Jekyll theme for Programmers">
-<meta property="og:url" content="http://vinitkumar.me/white-paper/2014/02/26/simple-state-machine-framework-in-c-number.html">
-<meta property="og:site_name" content="">
+  <meta content='http://onlywangyn.github.io//2014/02/26/simple-state-machine-framework-in-c-number/' property='og:url' />
+  <meta content="This blog post covers a very simple, light weight, yet flexible state machine framework in C# .Net.[Souce code on Git..." property='og:description' />
+  <meta content="article" property="og:type" />
 
-<!-- Webmaster Tools verfication -->
+<!-- - -->
+<script type='text/javascript'>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=604714799556697";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-
-
-
-<link rel="canonical" href="http://vinitkumar.me/white-paper/2014/02/26/simple-state-machine-framework-in-c-number.html">
-<link href="http://vinitkumar.me/white-paper/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
-
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="http://vinitkumar.me/white-paper/css/base.min.css" type="text/css" />
-<link rel="stylesheet" href="http://vinitkumar.me/white-paper/css/github.min.css" type="text/css" />
-<link rel="stylesheet" href="http://vinitkumar.me/white-paper/css/octicons.css" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
-</head>
-<body>
-  <div class="header-container">
-  <header>
-      <ul class="nav">
-        <!--Change the  URL here if working on an absolute domain-->
-        <li><a href="/white-paper"><span class="mega-octicon octicon-terminal" style="margin-right: 6px;"></span>White Paper</a></li>
-        <li><a href="/white-paper/about"><span class="mega-octicon octicon-person" style="margin-right: 6px;"></span>About</a></li>
-      </ul>
-  </header>
-  <script data-gratipay-username="vinitkme" data-gratipay-widget="button" src="//grtp.co/v1.js"></script>
+  </head>
+  <body>
+    <header>
+<a id="go-back-home" href="/"><img src="/images/scribble.png" alt="scribble" width="53" height="59"></a>
+<p>Scribble</p>
+</header>
+    <div id='container'>
+      <div class="block">
+  
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="http://muan.co">Blog</a>
+  
+    <a target="_blank" class="main" href="mailto:hello@muan.co">Email</a>
+  
+    <a target="_blank" class="main" href="http://github.com/muan">GitHub</a>
+  
 </div>
-
-  <div class="container">
-    <p class="intro">
-      White Paper is a Jekyll theme most suited to be used on tech blogs that like their content to shine.
-    </p>
-  <h2>Simple State Machine Framework in c#</h2>
-<p class="meta">26 Feb 2014</p>
-
-<div class="post">
-<p>This blog post covers a very simple, light weight, yet flexible state machine framework in C# .Net.</p>
+      <section class="paging">
+  
+    <div class="left">
+      <a href="/2014/02/15/setup-a-local-gitignore-without-messing-up-project/">
+        ‹
+      </a>
+    </div>
+  
+  
+    <div class="right">
+      <a href="/2014/05/01/the-pragmatic-programmer-checklist/">
+        ›
+      </a>
+    </div>
+  
+</section>
+      <div class="content">
+        <section class='post'>
+          <h1 class="upcase">
+            <div class='date'>26 Feb 2014</div>
+            Simple State Machine Framework in c#
+          </h1>
+          <p>This blog post covers a very simple, light weight, yet flexible state machine framework in C# .Net.</p>
 
 <p><a href="https://github.com/mubeenh/SSM">Souce code on Github</a></p>
 
@@ -109,7 +145,7 @@
         <span class="p">}</span>
     <span class="p">}</span>
 </code></pre></div>
-<p>Next and final step is to create a &#39;context&#39; by implementing <code>IStateMachineContext</code> interface. This interface declares following methods that need to be implemented to create a context.</p>
+<p>Next and final step is to create a &lsquo;context&rsquo; by implementing <code>IStateMachineContext</code> interface. This interface declares following methods that need to be implemented to create a context.</p>
 <div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="n">ICollection</span><span class="p">&lt;</span><span class="n">StateTransition</span><span class="p">&gt;</span> <span class="n">GetTransitions</span><span class="p">();</span>
 <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">ITransitionHandler</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">M</span><span class="p">&gt;&gt;</span> <span class="n">GetTransitionHandlersMap</span><span class="p">();</span>
 <span class="n">ICollection</span><span class="p">&lt;</span><span class="n">M</span><span class="p">&gt;</span> <span class="n">AllStates</span><span class="p">();</span>
@@ -168,31 +204,39 @@
 </code></pre></div>
 <p>And thats it. Your state machine is ready to handle transitions on the Service Ticket example entity.</p>
 
-</div>
+          <br />
+<p>
+  Til next time,<br/>
+  Nancy
+  <span class="muted">at 14:07</span>
+</p>
+<p>
+  <img src="/images/scribble3.png" alt="scribble" /> 
+</p>
 
-<div class="keep-in-touch">
-  <p>
-    
-  </p>
-</div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-size="large" data-hashtags="gotchacode">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+        </section>
+      </div>
+      
 
-
+      
+      <div class="block">
   
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-  </div><!-- /.main -->
-</body>
+    <a target="_top" class="main" href="/about">About</a>
+  
+    <a target="_blank" class="main" href="http://muan.co">Blog</a>
+  
+    <a target="_blank" class="main" href="mailto:hello@muan.co">Email</a>
+  
+    <a target="_blank" class="main" href="http://github.com/muan">GitHub</a>
+  
+</div>
+    </div>
+    <footer>
+  <a href="http://github.com/muan/scribble" class="muted">built with Jekyll using Scribble theme</a>
+  <br />
+  <br />
+  <img src="/images/scribble2.png" alt="scribble" /> 
+</footer>
+  </body>
 </html>
