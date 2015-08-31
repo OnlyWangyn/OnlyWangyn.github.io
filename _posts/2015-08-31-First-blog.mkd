@@ -7,6 +7,6 @@ categories:
 ---
 
 This is my first blog wrote by markdown.Haha,Welcome to Github page Nancy!Here I list two goals which I hope I can achive at the end of 2015
-1.finsh reading book:Java Concurrency in Practice,current in Chapter 3.Always try,also fail in the middle of this book,and then start fresh.
+1.finsh reading book:Java Concurrency in Practice,current in Chapter 3.Always try,also fail in the middle of this book,and then start over again.
 2.write at least 5 technical blogs in github page
 
