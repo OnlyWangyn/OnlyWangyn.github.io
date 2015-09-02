@@ -3,8 +3,8 @@ layout: page
 title: About
 ---
 
-Give people something to read and get to know you. Here's my attempt: this is [Mu-An](http://muan.co), a designer developer who lives in London at the moment.
+Hi,I'm Nancy!Not very typical programmer!Here I wanna record something I'm interested in,summarize waht I have learnt.My main focus is Mobile Application Development
 
-Tweet at [@muanchiou](http://twitter.com/muanchiou), read my code on [GitHub](http://github.com/muan), see my designs on [Dribbble](http://dribbble.com/muan), find my CV on [LinkedIn](http://uk.linkedin.com/in/muanchiou).
+Tweet at [@onlywangnumber](http://twitter.com/onlywangnumber), read my code on [GitHub](https://github.com/OnlyWangyn)
 
-This theme is made by me. You have a nice day. ♥
+have a nice day. ♥
