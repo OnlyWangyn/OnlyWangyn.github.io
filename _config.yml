@@ -14,7 +14,7 @@ links:
     external:     true
   - name:         Email
     url:          wangyanan613@hotmail.com
-    external:     true
+    external:     false
   - name:         GitHub
     url:          https://github.com/OnlyWangyn
     external:     true
