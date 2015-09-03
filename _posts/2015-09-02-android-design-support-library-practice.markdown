@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-Hightligh:pls ignore the data time,I just haven't figure out how to set it correctly.
+Hightligh:pls ignore the datetime,I just haven't figure out how to set it correctly.
 
 Recently,I finished practice about Android Design Lib. It's not very difficult,most of widgets from  that lib,I have already applied in my previous projects. Now I just put them together,and commit the demo to the github,hope one day,someone else can get hint from this small project.
 Here is link : [DesignLibDemo](https://github.com/OnlyWangyn/DesignLibDemo)
@@ -20,6 +20,8 @@ I am listing them here:
 
 As you see,both are Chinese.
 
-Find and resolve issue:
+Find and resolve issue:  
+
+
  It seems CoordinatorLayout and related things only work when setting buildToolsVersion to 22.
  if There is no shadow effect on FloationActionBar even you have already set Elevation Value,pls set app:borderWidth to 0.
