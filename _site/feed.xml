@@ -7,8 +7,23 @@
     <atom:link href="http://onlywangyn.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Android FlowLayout Implementation</title>
+        <description>&lt;p&gt;Wow,time flies,I haven&amp;rsquo;t noticed it&amp;rsquo;s already two weeks since last post.&lt;/p&gt;
+
+&lt;p&gt;I have already customized many widgets.  I decided to public them one by one as long ad I have time. The first one is Flowlayout.&lt;/p&gt;
+
+&lt;p&gt;Here is link : &lt;a href=&quot;https://github.com/OnlyWangyn/FlowLayoutDemo&quot;&gt;Android FlowLayout&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Btw,Here is my &lt;a href=&quot;http://blog.csdn.net/wynwynwyn&quot;&gt;Chinese Blog&lt;/a&gt;,I wrote more details about flowlayout in Chinese.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://onlywangyn.github.io//2015/09/16/android-FlowLayout/</link>
+        <guid isPermaLink="true">http://onlywangyn.github.io//2015/09/16/android-FlowLayout/</guid>
+      </item>
+    
+      <item>
         <title>Android Design Support Library Practice</title>
-        <description>&lt;p&gt;Hightligh:pls ignore the data time,I just haven&amp;rsquo;t figure out how to set it correctly.&lt;/p&gt;
+        <description>&lt;p&gt;Hightligh:pls ignore the datetime,I just haven&amp;rsquo;t figure out how to set it correctly.&lt;/p&gt;
 
 &lt;p&gt;Recently,I finished practice about Android Design Lib. It&amp;rsquo;s not very difficult,most of widgets from  that lib,I have already applied in my previous projects. Now I just put them together,and commit the demo to the github,hope one day,someone else can get hint from this small project.
 Here is link : &lt;a href=&quot;https://github.com/OnlyWangyn/DesignLibDemo&quot;&gt;DesignLibDemo&lt;/a&gt;&lt;/p&gt;
@@ -24,8 +39,9 @@ Here is link : &lt;a href=&quot;https://github.com/OnlyWangyn/DesignLibDemo&quot
 
 &lt;p&gt;As you see,both are Chinese.&lt;/p&gt;
 
-&lt;p&gt;Find and resolve issue:
- It seems CoordinatorLayout and related things only work when setting buildToolsVersion to 22.
+&lt;p&gt;Find and resolve issue:  &lt;/p&gt;
+
+&lt;p&gt;It seems CoordinatorLayout and related things only work when setting buildToolsVersion to 22.
  if There is no shadow effect on FloationActionBar even you have already set Elevation Value,pls set app:borderWidth to 0.&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Sep 2015 00:00:00 +0800</pubDate>
@@ -225,8 +241,7 @@ and for sure will help you evolve as a better developer.&lt;/p&gt;
 
 &lt;p&gt;You see there is a file called exclude. Fill it up with the files and directories you want it to ignore, just like the gist below:&lt;/p&gt;
 
-&lt;p&gt;&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/7597812.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/7597812.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;And it is done. Now you never have to worry about your editor messing up your commits.&lt;/p&gt;
 </description>
@@ -352,75 +367,6 @@ plugin_pool.register_plugin(FacebookGalleryPlugin)
         <pubDate>Wed, 01 Jan 2014 13:22:00 +0800</pubDate>
         <link>http://onlywangyn.github.io//2014/01/happy-new-year-2014.html</link>
         <guid isPermaLink="true">http://onlywangyn.github.io//2014/01/happy-new-year-2014.html</guid>
-      </item>
-    
-      <item>
-        <title>Scribble, a Jekyll theme</title>
-        <description>&lt;p&gt;I have other themes, checkout (mainly) &lt;a href=&quot;https://github.com/muan/muan.github.com/releases&quot;&gt;this repository&lt;/a&gt; and &lt;a href=&quot;https://github.com/muan/jekyll-wardrobe&quot;&gt;this repository&lt;/a&gt;. &amp;lt;3&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;There is no clever design philosophy to talk about, I tried to find something to work with, and &amp;lsquo;scribble&amp;rsquo; came to my mind. This theme uses Open Sans powered by Google Web Fonts, and was written in plain HTML, SCSS &amp;amp; CoffeeScript, though .scss &amp;amp; .coffee files wouldn&amp;rsquo;t be included in the theme. &lt;/p&gt;
-
-&lt;p&gt;The theme is mobile optimised but I did not check browser compatibility. It looks great in Chrome, Safari and Firefox though.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/muan/scribble&quot; target=&quot;_blank&quot; class=&quot;big-button gray&quot;&gt;Get it on GitHub &amp;hearts;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h3&gt;Get started&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/muan/scribble/fork&quot;&gt;Fork the repository&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Clone the repository to your computer.&lt;br /&gt; &lt;code&gt;git clone https://github.com/username/scribble&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bundle install&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;If using older versions of Jekyll&lt;/strong&gt;&lt;br /&gt;
-Build and run jekyll using &lt;code&gt;jekyll --server --auto&lt;/code&gt;.&lt;br /&gt;
-&lt;strong&gt;If using &lt;a href=&quot;http://blog.parkermoore.de/2013/05/06/jekyll-1-dot-0-released/&quot;&gt;Jekyll 1.0&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-Build Jekyll using &lt;code&gt;jekyll build&lt;/code&gt;.&lt;br /&gt;
-Then run Jekyll using &lt;code&gt;jekyll serve --watch&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Go to http://localhost:4000 for your site.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr&gt;
-
-&lt;h3&gt;Make it yours&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;I have extract most user specific information to &lt;code&gt;_config.yml&lt;/code&gt;, you should be able to set up almost everything from it.&lt;/li&gt;
-&lt;li&gt;Change about.md for blog intro.&lt;/li&gt;
-&lt;li&gt;For domain settings, see &lt;a href=&quot;https://help.github.com/articles/setting-up-a-custom-domain-with-pages&quot;&gt;the guide from GitHub&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr&gt;
-
-&lt;h3&gt;Options&lt;/h3&gt;
-
-&lt;p&gt;When writing a post, there are 3 options you can add to the header.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;disqus: y&lt;/strong&gt;&lt;br /&gt;
-If disqus is set to &amp;#39;y&amp;rsquo;, at the end of the post there will be a disqus thread, just like this one. To use disqus, you MUST &lt;a href=&quot;http://disqus.com/&quot;&gt;set up your own disqus account&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;share: y&lt;/strong&gt;&lt;br /&gt;
-An option for showing tweet and like button under a post.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;date&lt;/strong&gt;: 2013-05-06 18:07:17&lt;br /&gt;
-Date is not a required header since Jekyll reads the file name for date, this was added in only for the &lt;strong&gt;signoff time&lt;/strong&gt;. (as shown at the end of this post) If you don&amp;rsquo;t want the signoff time, go into &lt;code&gt;/includes/signoff.html&lt;/code&gt; and remove the &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/muan/scribble&quot; target=&quot;_blank&quot; class=&quot;big-button gray&quot;&gt;Get it on GitHub &amp;hearts;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h3&gt;The end&lt;/h3&gt;
-
-&lt;p&gt;Like it? &lt;a href=&quot;http://twitter.com/muanchiou&quot;&gt;Tell me&lt;/a&gt;.&lt;br/&gt;
-Problem? &lt;a href=&quot;https://github.com/muan/scribble&quot;&gt;Use GitHub Issues&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 07 May 2013 00:27:31 +0800</pubDate>
-        <link>http://onlywangyn.github.io//2013/05/07/scribble-the-jekyll-theme/</link>
-        <guid isPermaLink="true">http://onlywangyn.github.io//2013/05/07/scribble-the-jekyll-theme/</guid>
       </item>
     
   </channel>
