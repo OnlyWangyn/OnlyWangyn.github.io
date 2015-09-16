@@ -9,7 +9,7 @@ categories:
 Wow,time flies,I haven't noticed it's already two weeks since last post.
 
 
-I have already customized many widgets.  I decided to public them one by one as long ad I have time. The first one is Flowlayout.
+I have already customized many widgets.  I decided to publish them one by one as long as I have time. The first one is Flowlayout.
 
 Here is link : [Android FlowLayout](https://github.com/OnlyWangyn/FlowLayoutDemo)
 

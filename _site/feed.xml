@@ -10,7 +10,7 @@
         <title>Android FlowLayout Implementation</title>
         <description>&lt;p&gt;Wow,time flies,I haven&amp;rsquo;t noticed it&amp;rsquo;s already two weeks since last post.&lt;/p&gt;
 
-&lt;p&gt;I have already customized many widgets.  I decided to public them one by one as long ad I have time. The first one is Flowlayout.&lt;/p&gt;
+&lt;p&gt;I have already customized many widgets.  I decided to publish them one by one as long as I have time. The first one is Flowlayout.&lt;/p&gt;
 
 &lt;p&gt;Here is link : &lt;a href=&quot;https://github.com/OnlyWangyn/FlowLayoutDemo&quot;&gt;Android FlowLayout&lt;/a&gt;&lt;/p&gt;
 
@@ -241,7 +241,8 @@ and for sure will help you evolve as a better developer.&lt;/p&gt;
 
 &lt;p&gt;You see there is a file called exclude. Fill it up with the files and directories you want it to ignore, just like the gist below:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/7597812.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/7597812.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;And it is done. Now you never have to worry about your editor messing up your commits.&lt;/p&gt;
 </description>
